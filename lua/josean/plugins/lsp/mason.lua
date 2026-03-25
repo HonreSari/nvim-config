@@ -4,7 +4,7 @@ return {
     opts = {
       -- 1. Add jdtls here
       ensure_installed = {
-        "ts_ls",
+        "vtsls",
         "html",
         "cssls",
         "tailwindcss",
@@ -15,7 +15,9 @@ return {
         "prismals",
         "pyright",
         "eslint",
-        "jdtls", -- Added for Java support
+        "jdtls",
+        "angularls",
+        "spring-boot-tools-ls",
       },
     },
     dependencies = {
