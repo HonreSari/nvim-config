@@ -1,18 +1,21 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  -- CRITICAL: Use the 'master' branch because 'main' broke this config
   branch = "master",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
   config = function()
-    -- On the 'master' branch, this module still exists
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
       highlight = { enable = true },
       indent = { enable = true },
+      -- ADD THIS: Works with nvim-ts-autotag plugin for React
+      autotag = { enable = true },
       ensure_installed = {
-        "java", -- Important for your Spring Boot work
+        "java",
+        "sql", -- Added for PostgreSQL
+        "xml", -- Added for Maven pom.xml
+        "properties", -- Added for Spring config
         "json",
         "javascript",
         "typescript",

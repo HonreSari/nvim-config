@@ -57,6 +57,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 local severity = vim.diagnostic.severity
 
 vim.diagnostic.config({
+  virtual_text = true, -- <--- ADD THIS LINE
   signs = {
     text = {
       [severity.ERROR] = " ",
@@ -65,4 +66,7 @@ vim.diagnostic.config({
       [severity.INFO] = " ",
     },
   },
+  update_in_insert = true,
+  underline = true,
+  severity_sort = true,
 })
