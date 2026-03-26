@@ -15,9 +15,7 @@ return {
         "prismals",
         "pyright",
         "eslint",
-        "jdtls",
         "angularls",
-        "spring-boot-tools-ls",
       },
     },
     dependencies = {
